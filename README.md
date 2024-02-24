@@ -14,7 +14,7 @@
 
 ## UI展示：
 
-[GreadioUI(https://github.com/Ccj0221/OpenAI_TTS/blob/main/UI/gradio_ui.png)
+[GreadioUI](https://github.com/Ccj0221/OpenAI_TTS/blob/main/UI/gradio_ui.png)
 
 您也可以在以下链接创建实例：[codewithgpu](https://www.codewithgpu.com/u/J_0221)
 
