@@ -14,7 +14,7 @@
 
 ## UI展示：
 
-![Preview](https://raw.githubusercontent.com/Ccj0221/OpenAI_TTS/UI/gradio_ui.png?sanitize=true)
+![Preview](https://raw.githubusercontent.com/Ccj0221/OpenAI_TTS/master/UI/gradio_ui.png?sanitize=true)
 
 您也可以在以下链接创建实例：[codewithgpu](https://www.codewithgpu.com/u/J_0221)
 
