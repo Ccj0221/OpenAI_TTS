@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenAI 文本转语音 接口</title>
+</head>
+<body>
+    <h1>OpenAI 文本转语音 接口</h1>
+    <form method="POST">
+        <label for="text">输入文本：</label><br>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea><br><br>
+        
+        <label for="model">模型：</label>
+        <select id="model" name="model">
+            <option value="tts-1">tts-1</option>
+            <option value="tts-1-hd">tts-1-hd</option>
+        </select><br><br>
+        
+        <label for="voice">音色：</label>
+        <select id="voice" name="voice">
+            <option value="alloy">alloy</option>
+            <option value="echo">echo</option>
+            <option value="fable">fable</option>
+            <option value="onyx">onyx</option>
+            <option value="nova">nova</option>
+            <option value="shimmer">shimmer</option>
+        </select><br><br>
+        
+        <label for="api_key">OpenAI API Key：</label><br>
+        <input type="password" id="api_key" name="api_key"><br><br>
+        
+        <input type="submit" value="转换为音频">
+    </form>
+</body>
+</html>
