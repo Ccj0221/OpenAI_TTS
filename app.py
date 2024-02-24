@@ -18,7 +18,7 @@ def tts(text, model, voice, api_key):
             )
 
         except Exception as error:
-            raise gr.Error("音频生成错误. 请检查你的 API key 并再次尝试.")
+            raise gr.Error("音频生成错误. 请检查你的 API key 以及网络配置 并再次尝试.")
             print(str(error))
 
     with tempfile.NamedTemporaryFile(suffix=".mp3", delete=False) as temp_file:
@@ -36,11 +36,11 @@ with gr.Blocks() as demo:
       model = gr.Dropdown(choices=['tts-1','tts-1-hd'], label='Model', value='tts-1')
       voice = gr.Dropdown(choices=['alloy', 'echo', 'fable', 'onyx', 'nova', 'shimmer'], label='音色', value='alloy')
 
-    text = gr.Textbox(label="输入文本", placeholder="请输入你要转换的文本，如果转换失败，请检查你的 API key)
+    text = gr.Textbox(label="输入文本", placeholder="请输入你要转换的文本，如果转换失败，请检查你的 API key")
     btn = gr.Button("文本转音频")
     output_audio = gr.Audio(label="输出结果")
     
     text.submit(fn=tts, inputs=[text, model, voice, api_key], outputs=output_audio, api_name="tts_enter_key", concurrency_limit=None)
     btn.click(fn=tts, inputs=[text, model, voice, api_key], outputs=output_audio, api_name="tts_button", concurrency_limit=None)
 
-demo.launch(share=True)
+demo.launch(share=True, port=6006)
